@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sistematizando unidades relativas</title>
+    <meta name="charset" content="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+         :root {
+            --primary: rgb(129, 97, 192);
+            --secondary: rgb(230, 220, 250);
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+        }
+        
+        header {
+            height: 120px;
+            background-color: var(--primary);
+        }
+        
+        .container {
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+            border-radius: 4px;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 1.2em;
+            line-height: 1.5em;
+            position: relative;
+            top: -50px;
+            background-color: white;
+        }
+        
+        .table {
+            width: 100%;
+        }
+        
+        .table td,
+        .table th {
+            text-align: left;
+        }
+        
+        tr:nth-child(even) {
+            background-color: var(--secondary);
+        }
+        
+        .title {
+            text-align: center;
+            text-transform: uppercase;
+        }
+        
+        @media (max-width: 599px) {
+            .table th {
+                display: none;
+            }
+            .table th:first-of-type {
+                display: table-cell;
+            }
+            .table td {
+                display: block;
+            }
+            .table td:first-of-type {
+                font-size: xx-large;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <section>
+        <article class="container">
+            <div class="title">
+                <h1>Tabla de datos de la familia</h1>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Rol</th>
+                        <th>Valoración</th>
+                        <th>Operaciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Mario Olivares Ferreira</td>
+                        <td>35</td>
+                        <td>Frontend</td>
+                        <td>○ ○ ○ ○ ○</td>
+                        <td>Ver mas</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Yarlenis Silva Carbonell</td>
+                        <td>35</td>
+                        <td>Doctor</td>
+                        <td>○ ○ ○ ○</td>
+                        <td>Ver mas</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Thaira Ledezma Silva</td>
+                        <td>7</td>
+                        <td>Student</td>
+                        <td>○ ○ ○</td>
+                        <td>Ver mas</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Thiago Olivares Silva</td>
+                        <td>0</td>
+                        <td>Bebe</td>
+                        <td>○</td>
+                        <td>Ver mas</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+</body>
+
+</html>

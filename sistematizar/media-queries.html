@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sistematizando unidades relativas</title>
+    <meta name="charset" content="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+        /* Este valor aqui afecta a los que usen rem */
+        /*html {
+            
+            font-size: 8px;
+        }*/
+        
+        .container {
+            display: inline-block;
+            border: 1px darkgoldenrod solid;
+            /* Em se vera afectado por el font-size que incluya este elemento */
+            padding: 1.2em;
+            /* Rem dependera del font-size del elemento HTML */
+            /*padding: 1.2rem;*/
+        }
+        
+        .content {
+            background-color: darkkhaki;
+        }
+        
+        .container--16 {
+            /* Esta valor afectara los vamores em que se usen dentro de esta clase */
+            font-size: 16px;
+        }
+        
+        .container--24 {
+            font-size: 24px;
+        }
+        /* Para dispositivos mas grandes los margen deben aumentar*/
+        
+        @media screen and (min-width: 599px) {
+            .content {
+                background-color: rgb(155, 212, 57);
+            }
+            .container--16 {
+                /* Esta valor afectara los vamores em que se usen dentro de esta clase */
+                font-size: 36px;
+            }
+            .container--24 {
+                font-size: 48px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <article>
+            <div class="container container--16">
+                <div class="content">
+                    <p>Contenido contenido1</p>
+                    <p>Contenido contenido2</p>
+                    <p>Contenido contenido3</p>
+                </div>
+            </div>
+            <div class="container container--24">
+                <div class="content">
+                    <p>Contenido contenido1</p>
+                    <p>Contenido contenido2</p>
+                    <p>Contenido contenido3</p>
+                </div>
+            </div>
+        </article>
+    </section>
+</body>
+
+</html>
